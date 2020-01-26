@@ -1,18 +1,15 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Login from "./components/Login";
+import Main from "./components/Main";
 import "./components/main.scss";
 
 export const Context = React.createContext();
 
 const App = () => {
   return (
-    <Router>
-      <div className="App">
-        <Route exact path="/" component={Login} />
-      </div>
-    </Router>
-  );
+    <div className="App">
+      <Main />
+    </div>
+  )
 };
 
 export default App;
