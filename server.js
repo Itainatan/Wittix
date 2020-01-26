@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 var http = require("http").Server(app);
-const path = require("path");
 const bodyparser = require("body-parser");
 
 app.use(bodyparser.urlencoded({ extended: false }));
