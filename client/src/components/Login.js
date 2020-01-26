@@ -5,36 +5,32 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      rnageStart: 1,
+      rangeStart: 1,
       rangeEnd: 1
     };
   }
 
-  startWorke = () => {
+  startWork = () => {
     axios.post("/api/start/startWork", {
-      range: this.state.rnageStart
+      range: this.state.rangeStart
     }).then((res) => {
-      if (res.status === 200) {
-      }
     })
   };
 
   endWork = () => {
     axios.post("/api/end/endWork", {
-      range: this.state.rnageStart
+      range: this.state.rangeEnd
     }).then((res) => {
-      if (res.status === 200) {
-      }
     })
   };
 
   render() {
     return (
-      <div className="col-md-6 offset-md-3 col-sm-12">
-        <h1 style={{ marginTop: "15px" }} className="text-center">
+      <div>
+        <h1 style={{ marginTop: "15px" }}>
           Welcome to Work Hours
         </h1>
-        <button style={{ margin: "20px" }} onClick={this.startWorke}>
+        <button style={{ margin: "20px" }} onClick={this.startWork}>
           Start work
           </button>
         <button style={{ margin: "20px" }} onClick={this.endWork}>

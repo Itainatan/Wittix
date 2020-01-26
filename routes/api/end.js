@@ -1,23 +1,19 @@
 const express = require("express");
 const router = express.Router();
-const fs = require('fs');
 const { google } = require('googleapis');
 
-const TOKEN_PATH = 'token.json';
-const testing = require("../../key");
+const key = require("../../key");
 
 router.post("/endWork", (req, res) => {
-  const range = `A${req.body.range}`;
-  const auth = testing.sometest()
-  console.log(testing.sometest())
+  const range = `E${req.body.range}`;
+  key(end, range);
 });
 
-function start(range, auth) {
-  console.log(range)
+function end(range, auth) {
   const sheets = google.sheets({ version: 'v4', auth });
   let values = [
     [
-      "Start"
+      "End"
     ],
     [
       new Date().toJSON()
@@ -33,7 +29,6 @@ function start(range, auth) {
     range,
   }, (err, res) => {
     if (err) return console.log('The API returned an error: ' + err);
-    else console.log("succeded Start")
   });
 }
 
