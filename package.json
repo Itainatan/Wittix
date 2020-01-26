@@ -1,7 +1,5 @@
 {
-  "name": "nextbigthing",
   "version": "1.0.0",
-  "description": "Next big thing",
   "main": "server.js",
   "scripts": {
     "start": "node server",
@@ -11,8 +9,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
-  "author": "Itay natan",
-  "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
     "googleapis": "^39.2.0",
